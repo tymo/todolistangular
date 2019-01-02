@@ -81,8 +81,7 @@ angular.module("todoList").directive('todoList', function () {
         scope.confirmaApagarTarefa = function (tarefa) {
             if (scope.store.get('itens').includes(tarefa)) {
                 if (confirm("Deseja excluir \'" + tarefa.descricao + "\'?")) {
-                    delete scope.store.get('itens').splice(scope.tarefas.indexOf(tarefa), 1)
-                    ;
+                    delete scope.store.get('itens').splice(scope.store.get('itens').indexOf(tarefa), 1);
                 }
             }
         };
