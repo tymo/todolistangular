@@ -48,7 +48,6 @@ angular.module("todoList").directive('itemInput', function ($compile) {
         // element é a variável que guarda o html que está na tela
 
         scope.adicionarTarefa = function (tarefa) {
-            //verufucar por que está vindo undefined
             if (tarefa) {
                 scope.dscricaoNaoInformada = !tarefa.descricao;
                 scope.dataNaoInformada = !tarefa.dataprv;
